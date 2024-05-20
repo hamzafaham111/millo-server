@@ -5,10 +5,15 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:["http://millo.vercel.app"],
+  methods:["GET","POST"],
+  credentials:true
+}));
 
 // Parse JSON request body
 app.use(express.json());
+
 connectDB();
 const PORT = process.env.PORT || 3001;
 
