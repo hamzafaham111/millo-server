@@ -5,11 +5,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-app.use(cors({
-  origin:["http://millo.vercel.app"],
-  methods:["GET","POST"],
-  credentials:true
-}));
+app.use(cors());
 
 // Parse JSON request body
 app.use(express.json());
