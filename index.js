@@ -9,7 +9,6 @@ app.use(cors());
 
 // Parse JSON request body
 app.use(express.json());
-
 connectDB();
 const PORT = process.env.PORT || 3001;
 
